@@ -1,0 +1,276 @@
+/* INFO CARD */
+
+.infoCard {
+  width: 350px;
+  height: 420px;
+  padding: 50px 60px;
+  border-radius: 8px;
+  background: #eef7fb;
+  margin: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* This class is added in order for the transition of cards insede the slider to be animated */
+.slideElement {
+  transition: transform 0.5s;
+}
+
+.textWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #1c2635;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.desc {
+  color: #1c2635;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* PRODUCT CARD */
+
+.productCard {
+  width: 350px;
+  height: 420px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #fff;
+  background-color: #fff;
+  margin: 0.5rem;
+  flex-shrink: 0;
+  transition: transform 0.5s;
+}
+
+.imgContainer {
+  width: 350px;
+  height: 345px;
+  margin-bottom: 0.5rem;
+  background-color: rgba(233, 233, 233);
+  border-radius: 8px;
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productTextWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.productTitle,
+.productPrice {
+  width: 100%;
+  text-align: center;
+  color: #1c2635;
+}
+
+i {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  color: #1c2635;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.heart:hover {
+  transform: scale(1.4, 1.4);
+}
+
+/* SLIDER */
+
+.sliderContainer {
+  width: 100%;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.slider {
+  width: 1100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.prevBtn,
+.nextBtn {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  border: none;
+  color: #1c2635;
+  background-color: #eef7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.prevBtn:disabled,
+.nextBtn:disabled {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .prevBtn,
+  .nextBtn {
+    bottom: -4rem;
+  }
+}
+
+.prevBtn {
+  left: 1rem;
+}
+
+.nextBtn {
+  right: 1rem;
+}
+
+.slideDots {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  display: flex;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #e3e3e3;
+  transition: background-color 0.5s;
+  margin: 0 4.5px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #5bc1ed;
+  transform: scale(1.2, 1.2);
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  .slider {
+    width: calc(700px + 2rem);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .slider {
+    width: calc(350px + 1rem);
+  }
+}
+
+/* SKELETON CARD */
+
+/* .skeleton {
+  background-color: #5bc1ed;
+  border-radius: 8px;
+} */
+
+/* animation */
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animatePulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeletonCard {
+  padding: 1rem;
+
+  width: 350px;
+  height: 420px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #fff;
+  background: #eef7fb;
+  margin: 0.5rem;
+  flex-shrink: 0;
+  transition: transform 0.5s;
+}
+
+.skeletonWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skeletonImgContainer {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 20px;
+  padding: 8px;
+  background-color: #aaddf3;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.skeletonProductTextWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.skeletonText {
+  height: 22px;
+  width: 100%;
+  background-color: #aaddf3;
+  border-radius: 8px;
+}

@@ -1,0 +1,59 @@
+.container {
+  position: absolute;
+  top: 30%;
+  right: 2rem;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleSvg {
+  transform: rotate(-90deg);
+}
+
+.progressCircle {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  transition: stroke-dashoffset 0.5s ease;
+  stroke-linecap: round;
+  z-index: 10;
+}
+
+.fullCircle {
+  stroke-dasharray: none; /* No dash array, creating a full outline */
+  stroke-dashoffset: 0; /* No dash offset */
+  transition: stroke-dashoffset 0.5s ease;
+  z-index: 5; /* Behind the progress circle */
+}
+
+.text {
+  position: absolute;
+  width: 29px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  color: #1c2635;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media screen and (max-width: 840px) {
+  .container {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .container {
+    top: 1rem;
+    right: 1rem;
+  }
+}
