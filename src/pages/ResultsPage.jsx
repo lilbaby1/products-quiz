@@ -55,7 +55,7 @@ const ResultsPage = () => {
     // setResetMemo((prev) => !prev)
     dispatch({ type: "RETAKE" })
     navigate("../quiz")
-    window.location.reload() // Used in order to reset the memoized wishList
+    // window.location.reload() // Used in order to reset the memoized wishList
   }
 
   const handleToQuiz = () => {
